@@ -1,10 +1,11 @@
 {
   "name": "measuring-cup",
   "version": "1.0.0",
-  "description": "A quick and simple tool to convert cooking measurements like ounces, cups and tablespoons right in your code! 📏🥛",
+  "description":
+    "A quick and simple tool to convert cooking measurements like ounces, cups and tablespoons right in your code! 📏🥛",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "babel ./src --out-dir ./dist",
     "prepublish": "npm run build"
   },
@@ -21,7 +22,8 @@
     "measure",
     "conversion"
   ],
-  "author": "Christian Gaetano <hello@christiangaetano.com> (http://christiangaetano.com)",
+  "author":
+    "Christian Gaetano <hello@christiangaetano.com> (http://christiangaetano.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/cgatno/measuring-cup/issues"
@@ -34,6 +36,7 @@
     "babel-eslint": "^8.0.2",
     "eslint": "^4.11.0",
     "eslint-plugin-prettier": "^2.3.1",
+    "jest": "^21.2.1",
     "prettier": "^1.8.2"
   }
 }
