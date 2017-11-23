@@ -1,0 +1,28 @@
+{
+  "name": "measuring-cup",
+  "version": "1.0.0",
+  "description": "A quick and simple tool to convert cooking measurements like ounces, cups and tablespoons right in your code! 📏🥛",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cgatno/measuring-cup.git"
+  },
+  "keywords": [
+    "convert",
+    "cooking",
+    "ounces",
+    "cups",
+    "tablespoons",
+    "measure",
+    "conversion"
+  ],
+  "author": "Christian Gaetano <hello@christiangaetano.com> (http://christiangaetano.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cgatno/measuring-cup/issues"
+  },
+  "homepage": "https://github.com/cgatno/measuring-cup#readme"
+}
