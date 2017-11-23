@@ -1,0 +1,7 @@
+# NPM packages
+# Restore with `npm install`
+node_modules/
+
+# Distribution files transpiled with Babel
+# Build with `npm run build`
+dist/

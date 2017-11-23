@@ -4,7 +4,9 @@
   "description": "A quick and simple tool to convert cooking measurements like ounces, cups and tablespoons right in your code! 📏🥛",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel ./src --out-dir ./dist",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -24,5 +26,10 @@
   "bugs": {
     "url": "https://github.com/cgatno/measuring-cup/issues"
   },
-  "homepage": "https://github.com/cgatno/measuring-cup#readme"
+  "homepage": "https://github.com/cgatno/measuring-cup#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.32",
+    "@babel/core": "^7.0.0-beta.32",
+    "@babel/preset-env": "^7.0.0-beta.32"
+  }
 }
