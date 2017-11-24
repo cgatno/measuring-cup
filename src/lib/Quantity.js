@@ -30,14 +30,27 @@ export default class Quantity {
   }
 
   toOunces() {
-    return ConversionTable.convert(this.baseMeasurement.unit, 'ounce');
+    return this.doConversion('ounce').toNumber();
+  }
+
+  doConversion(toUnit) {
+    return new Quantity(
+      `${ConversionTable.convert(this.baseMeasurement.unit, toUnit)} ${toUnit}`,
+    );
+  }
+
+  toNumber() {
+    return Number(this.baseMeasurement.quantity);
   }
 
   toString() {
     // Pluralize the unit if necessary
     // TODO: Determine if pluralization makes sense. E.g. if the unit is 'oz,' it doesn't make
     // sense to add an 's' even if the quantity is greater than 1.
-    const unitString = this.quantity > 1 ? `${this.unit}s` : this.unit;
-    return `${this.quantity} ${unitString}`;
+    const unitString =
+      this.baseMeasurement.quantity > 1
+        ? `${this.baseMeasurement.unit}s`
+        : this.baseMeasurement.unit;
+    return `${this.baseMeasurement.quantity} ${unitString}`;
   }
 }
