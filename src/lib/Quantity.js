@@ -32,4 +32,12 @@ export default class Quantity {
   toOunces() {
     return ConversionTable.convert(this.baseMeasurement.unit, 'ounce');
   }
+
+  toString() {
+    // Pluralize the unit if necessary
+    // TODO: Determine if pluralization makes sense. E.g. if the unit is 'oz,' it doesn't make
+    // sense to add an 's' even if the quantity is greater than 1.
+    const unitString = this.quantity > 1 ? `${this.unit}s` : this.unit;
+    return `${this.quantity} ${unitString}`;
+  }
 }
