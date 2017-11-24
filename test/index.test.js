@@ -1,5 +1,5 @@
-const measureOut = require('../dist/index');
+const measure = require('../dist/index');
 
 test('converts 1 cup to 8 ounces', () => {
-  expect(measureOut('1 cup').toOunces()).toBe(8);
+  expect(measure('1 cup').toOunces()).toBe(8);
 });
