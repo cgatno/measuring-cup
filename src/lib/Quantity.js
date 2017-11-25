@@ -30,10 +30,10 @@ export default class Quantity {
   }
 
   toOunces() {
-    return this.doConversion('ounce').toNumber();
+    return this.convertTo('ounce').toNumber();
   }
 
-  doConversion(toUnit) {
+  convertTo(toUnit) {
     return new Quantity(
       `${ConversionTable.convert(this.baseMeasurement.unit, toUnit)} ${toUnit}`,
     );
