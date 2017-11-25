@@ -1,6 +1,6 @@
 {
   "name": "measuring-cup",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description":
     "A quick and simple tool to convert cooking measurements like ounces, cups and tablespoons right in your code! 📏🥛",
   "main": "dist/index.js",
