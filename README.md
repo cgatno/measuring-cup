@@ -86,10 +86,12 @@ console.log(`Add ${cumin.toString()} of cumin.`);
 
 ### Supported Units
 
-| Input (aliases) | toCups() | toOunces() |
-| --------------- | :------: | :--------: |
-| cups            |    ✅    |     ✅     |
-| ounces (oz)     |    ✅    |     ✅     |
+| Input (aliases)   | toCups() | toOunces() | toTablespoons() | toTeaspoons() |
+| ----------------- | :------: | :--------: | :-------------: | :-----------: |
+| cups              |    ✅    |     ✅     |       ✅        |      ✅       |
+| ounces (oz)       |    ✅    |     ✅     |       ✅        |      ✅       |
+| tablespoons(tbsp) |    ✅    |     ✅     |       ✅        |      ✅       |
+| teaspoons (tsp)   |    ✅    |     ✅     |       ✅        |      ✅       |
 
 The table above lists the currently supported input units along with supported
 aliases (typically abbreviations). Both singular and plural forms are supported
