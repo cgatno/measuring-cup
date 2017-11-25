@@ -33,9 +33,24 @@ export default class Quantity {
     return this.convertTo('ounce').toNumber();
   }
 
+  toCups() {
+    return this.convertTo('cup').toNumber();
+  }
+
+  toTablespoons() {
+    return this.convertTo('tablespoon').toNumber();
+  }
+
+  toTeaspoons() {
+    return this.convertTo('teaspoon').toNumber();
+  }
+
   convertTo(toUnit) {
     return new Quantity(
-      `${ConversionTable.convert(this.baseMeasurement.unit, toUnit)} ${toUnit}`,
+      `${ConversionTable.getConversionFactor(
+        this.baseMeasurement.unit,
+        toUnit,
+      ) * this.baseMeasurement.quantity} ${toUnit}`,
     );
   }
 
