@@ -1,6 +1,6 @@
 # measuring-cup
 
-[![Build Status](https://travis-ci.org/cgatno/measuring-cup.svg?branch=master)](https://travis-ci.org/cgatno/measuring-cup)
+[![Build Status](https://travis-ci.org/cgatno/measuring-cup.svg?branch=develop)](https://travis-ci.org/cgatno/measuring-cup)
 [![npm version](https://badge.fury.io/js/measuring-cup.svg)](https://badge.fury.io/js/measuring-cup)
 
 A quick and simple tool to convert cooking measurements like ounces, cups and
@@ -86,10 +86,15 @@ console.log(`Add ${cumin.toString()} of cumin.`);
 
 ### Supported Units
 
-| Input (aliases) | toCups() | toOunces() |
-| --------------- | :------: | :--------: |
-| cups            |    ✅    |     ✅     |
-| ounces (oz)     |    ✅    |     ✅     |
+| Input (aliases)   | toCups() | toOunces() | toTablespoons() | toTeaspoons() | toPints() | toQuarts() | toGallons() |
+| ----------------- | :------: | :--------: | :-------------: | :-----------: | :-------: | :--------: | :---------: |
+| cups              |    ✅    |     ✅     |       ✅        |      ✅       |    ✅     |     ✅     |     ✅      |
+| ounces (oz)       |    ✅    |     ✅     |       ✅        |      ✅       |    ✅     |     ✅     |     ✅      |
+| tablespoons(tbsp) |    ✅    |     ✅     |       ✅        |      ✅       |    ✅     |     ✅     |     ✅      |
+| teaspoons (tsp)   |    ✅    |     ✅     |       ✅        |      ✅       |    ✅     |     ✅     |     ✅      |
+| pints (pt)        |    ✅    |     ✅     |       ✅        |      ✅       |    ✅     |     ✅     |     ✅      |
+| quarts (qt)       |    ✅    |     ✅     |       ✅        |      ✅       |    ✅     |     ✅     |     ✅      |
+| gallons (gal)     |    ✅    |     ✅     |       ✅        |      ✅       |    ✅     |     ✅     |     ✅      |
 
 The table above lists the currently supported input units along with supported
 aliases (typically abbreviations). Both singular and plural forms are supported
