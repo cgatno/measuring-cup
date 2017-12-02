@@ -1,3 +1,5 @@
+// @flow
+
 // For quick lookup of zero-based index of a given unit in the factor table
 const lookup = {
   cup: 0,
@@ -20,7 +22,7 @@ const factorTable = [
 ];
 
 export default class ConversionTable {
-  static getConversionFactor(fromUnit, toUnit) {
+  static getConversionFactor(fromUnit: string, toUnit: string) {
     // Check that both units specified can be looked up
     if (!lookup[fromUnit.toLowerCase()] && !lookup[toUnit.toLowerCase()]) {
       throw new Error(

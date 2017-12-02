@@ -1,3 +1,5 @@
+// @flow
+
 import ConversionTable from './ConversionTable';
 
 // Regex to extract quantity and type of base measurement
@@ -8,7 +10,13 @@ import ConversionTable from './ConversionTable';
 const BASE_MEASUREMENT_TEST = /^([0-9]+([,.][0-9]+)?)\s([a-zA-Z]+?)(s\b|\b)/;
 
 export default class Quantity {
-  constructor(baseMeasurement) {
+  baseMeasurement: {
+    raw: string,
+    quantity: number,
+    unit: string,
+  };
+
+  constructor(baseMeasurement: string) {
     // Input measurement must conform to the regex described above
     if (!BASE_MEASUREMENT_TEST.test(baseMeasurement)) {
       throw new Error(
@@ -24,8 +32,8 @@ export default class Quantity {
     // Store the raw input along with extracted quantity and units
     this.baseMeasurement = {
       raw: baseMeasurement,
-      quantity: measurementFields[1],
-      unit: measurementFields[3],
+      quantity: Number(measurementFields[1]),
+      unit: String(measurementFields[3]),
     };
   }
 
@@ -45,7 +53,7 @@ export default class Quantity {
     return this.convertTo('teaspoon').toNumber();
   }
 
-  convertTo(toUnit) {
+  convertTo(toUnit: string) {
     return new Quantity(
       `${ConversionTable.getConversionFactor(
         this.baseMeasurement.unit,
