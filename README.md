@@ -86,12 +86,15 @@ console.log(`Add ${cumin.toString()} of cumin.`);
 
 ### Supported Units
 
-| Input (aliases)   | toCups() | toOunces() | toTablespoons() | toTeaspoons() |
-| ----------------- | :------: | :--------: | :-------------: | :-----------: |
-| cups              |    ✅    |     ✅     |       ✅        |      ✅       |
-| ounces (oz)       |    ✅    |     ✅     |       ✅        |      ✅       |
-| tablespoons(tbsp) |    ✅    |     ✅     |       ✅        |      ✅       |
-| teaspoons (tsp)   |    ✅    |     ✅     |       ✅        |      ✅       |
+| Input (aliases)   | toCups() | toOunces() | toTablespoons() | toTeaspoons() | toPints() | toQuarts() | toGallons() |
+| ----------------- | :------: | :--------: | :-------------: | :-----------: | :-------: | :--------: | :---------: |
+| cups              |    ✅    |     ✅     |       ✅        |      ✅       |    ✅     |     ✅     |     ✅      |
+| ounces (oz)       |    ✅    |     ✅     |       ✅        |      ✅       |    ✅     |     ✅     |     ✅      |
+| tablespoons(tbsp) |    ✅    |     ✅     |       ✅        |      ✅       |    ✅     |     ✅     |     ✅      |
+| teaspoons (tsp)   |    ✅    |     ✅     |       ✅        |      ✅       |    ✅     |     ✅     |     ✅      |
+| pints (pt)        |    ✅    |     ✅     |       ✅        |      ✅       |    ✅     |     ✅     |     ✅      |
+| quarts (qt)       |    ✅    |     ✅     |       ✅        |      ✅       |    ✅     |     ✅     |     ✅      |
+| gallons (gal)     |    ✅    |     ✅     |       ✅        |      ✅       |    ✅     |     ✅     |     ✅      |
 
 The table above lists the currently supported input units along with supported
 aliases (typically abbreviations). Both singular and plural forms are supported
