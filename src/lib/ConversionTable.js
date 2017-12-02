@@ -31,7 +31,7 @@ const factorTable = [
 ];
 
 export default class ConversionTable {
-  static getConversionFactor(fromUnit: string, toUnit: string) {
+  static getConversionFactor(fromUnit: string, toUnit: string): number {
     // Check that both units specified can be looked up
     if (!lookup[fromUnit.toLowerCase()] && !lookup[toUnit.toLowerCase()]) {
       throw new Error(

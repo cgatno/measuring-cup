@@ -37,23 +37,23 @@ export default class Quantity {
     };
   }
 
-  toOunces() {
+  toOunces(): number {
     return this.convertTo('ounce').toNumber();
   }
 
-  toCups() {
+  toCups(): number {
     return this.convertTo('cup').toNumber();
   }
 
-  toTablespoons() {
+  toTablespoons(): number {
     return this.convertTo('tablespoon').toNumber();
   }
 
-  toTeaspoons() {
+  toTeaspoons(): number {
     return this.convertTo('teaspoon').toNumber();
   }
 
-  convertTo(toUnit: string) {
+  convertTo(toUnit: string): Quantity {
     return new Quantity(
       `${ConversionTable.getConversionFactor(
         this.baseMeasurement.unit,
@@ -62,11 +62,11 @@ export default class Quantity {
     );
   }
 
-  toNumber() {
+  toNumber(): number {
     return Number(this.baseMeasurement.quantity);
   }
 
-  toString() {
+  toString(): string {
     // Pluralize the unit if necessary
     // TODO: Determine if pluralization makes sense. E.g. if the unit is 'oz,' it doesn't make
     // sense to add an 's' even if the quantity is greater than 1.
