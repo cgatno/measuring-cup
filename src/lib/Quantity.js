@@ -53,6 +53,18 @@ export default class Quantity {
     return this.convertTo('teaspoon').toNumber();
   }
 
+  toPints(): number {
+    return this.convertTo('pint').toNumber();
+  }
+
+  toQuarts(): number {
+    return this.convertTo('quart').toNumber();
+  }
+
+  toGallons(): number {
+    return this.convertTo('gallon').toNumber();
+  }
+
   convertTo(toUnit: string): Quantity {
     return new Quantity(
       `${ConversionTable.getConversionFactor(
