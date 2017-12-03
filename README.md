@@ -14,7 +14,8 @@ Currently, measuring-cup is distributed via npm with no dependencies.
 
 ## Usage
 
-The API for measuring-cup is straightforward and designed for simplistic coding:
+The API for measuring-cup is straightforward and designed for simplistic,
+semantic coding:
 
 ```javascript
 const measure = require('measuring-cup');
@@ -23,9 +24,13 @@ console.log(measure('1 cup').toOunces()); // `8`
 ```
 
 The package exports a function which takes a single string argument in the form
-of `<quantity> <unit>`. Quantities should always be in the form of an integer or
-decimal (e.g. 3 or 2.5). Units can be passed as singular or plural, and most
-abbreviations are supported.
+of:
+
+    <quantity> <unit>
+
+Quantities should always be in the form of an integer or decimal (e.g. 3 or
+2.5). Units can be passed as singular or plural, and most abbreviations are
+supported.
 
 Here's a list of examples, all of which are valid measuring-cup inputs:
 
@@ -124,7 +129,7 @@ Even though this isn't exactly a "mission critical" or groundbreaking Node
 module, I think it's a great little project to hack on if you're just getting
 started with Node or looking for something fun to work on.
 
-Despite it's whimsical nature, this project places an emphasis on writing
+Despite its whimsical nature, this project places an emphasis on writing
 well-structured, quality code. Major features should be testable and accompanied
 by a unit test.
 
