@@ -5,3 +5,6 @@ node_modules/
 # Distribution files transpiled with Babel
 # Build with `npm run build`
 dist/
+
+# System files
+.DS_Store
