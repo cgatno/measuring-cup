@@ -194,7 +194,7 @@ see the [tags on this repository](https://github.com/cgatno/measuring-cup/tags).
 Even if you don't want to work on the project yourself, you can help out a lot
 just by reporting any bugs you find or enhancements you want to see added!
 
-Head over to [GitHub's issue tracker](https://github.com/your/project/issues) to
+Head over to [GitHub's issue tracker](https://github.com/cgatno/measuring-cup/issues) to
 submit a bug report or let us know about a feature request!
 
 ### Some Notes on Development Environment
