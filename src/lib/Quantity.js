@@ -9,6 +9,12 @@ import ConversionTable from './ConversionTable';
 //  3: Singular measurement type (e.g. 'cup')
 const BASE_MEASUREMENT_TEST = /^([0-9]+([,.][0-9]+)?)\s([a-zA-Z]+?)(s\b|\b)/;
 
+// Generate a new Error object when an invalid input is provided
+const InvalidQuantityInputError = () =>
+  new Error(
+    'The input measurement must be in the format `<quantity> <unit>` where quantity is an integer or decimal.',
+  );
+
 export default class Quantity {
   baseMeasurement: {
     raw: string,
@@ -19,15 +25,18 @@ export default class Quantity {
   constructor(baseMeasurement: string) {
     // Input measurement must conform to the regex described above
     if (!BASE_MEASUREMENT_TEST.test(baseMeasurement)) {
-      throw new Error(
-        'The input measurement must be in the format `<quantity> <unit>` where quantity is an integer or decimal.',
-      );
+      throw InvalidQuantityInputError();
     }
 
     // Execute regex on the lowercase input
     const measurementFields = BASE_MEASUREMENT_TEST.exec(
       baseMeasurement.toLowerCase(),
     );
+
+    // If the regex failed, throw an error
+    if (!measurementFields) {
+      throw InvalidQuantityInputError();
+    }
 
     // Store the raw input along with extracted quantity and units
     this.baseMeasurement = {
