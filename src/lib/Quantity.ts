@@ -1,6 +1,4 @@
-// @flow
-
-import ConversionTable from './ConversionTable';
+import ConversionTable from "./ConversionTable";
 
 // Regex to extract quantity and type of base measurement
 // Expects `<quantity> <type>` - e.g. 12.5 cups
@@ -12,14 +10,14 @@ const BASE_MEASUREMENT_TEST = /^([0-9]+([,.][0-9]+)?)\s([a-zA-Z]+?)(s\b|\b)/;
 // Generate a new Error object when an invalid input is provided
 const InvalidQuantityInputError = () =>
   new Error(
-    'The input measurement must be in the format `<quantity> <unit>` where quantity is an integer or decimal.',
+    "The input measurement must be in the format `<quantity> <unit>` where quantity is an integer or decimal.",
   );
 
 export default class Quantity {
   baseMeasurement: {
-    raw: string,
-    quantity: number,
-    unit: string,
+    raw: string;
+    quantity: number;
+    unit: string;
   };
 
   constructor(baseMeasurement: string) {
@@ -47,39 +45,39 @@ export default class Quantity {
   }
 
   toOunces(): number {
-    return this.convertTo('ounce').toNumber();
+    return this.convertTo("ounce").toNumber();
   }
 
   toCups(): number {
-    return this.convertTo('cup').toNumber();
+    return this.convertTo("cup").toNumber();
   }
 
   toTablespoons(): number {
-    return this.convertTo('tablespoon').toNumber();
+    return this.convertTo("tablespoon").toNumber();
   }
 
   toTeaspoons(): number {
-    return this.convertTo('teaspoon').toNumber();
+    return this.convertTo("teaspoon").toNumber();
   }
 
   toPints(): number {
-    return this.convertTo('pint').toNumber();
+    return this.convertTo("pint").toNumber();
   }
 
   toQuarts(): number {
-    return this.convertTo('quart').toNumber();
+    return this.convertTo("quart").toNumber();
   }
 
   toGallons(): number {
-    return this.convertTo('gallon').toNumber();
+    return this.convertTo("gallon").toNumber();
   }
 
   convertTo(toUnit: string): Quantity {
     return new Quantity(
-      `${ConversionTable.getConversionFactor(
-        this.baseMeasurement.unit,
-        toUnit,
-      ) * this.baseMeasurement.quantity} ${toUnit}`,
+      `${
+        ConversionTable.getConversionFactor(this.baseMeasurement.unit, toUnit) *
+        this.baseMeasurement.quantity
+      } ${toUnit}`,
     );
   }
 

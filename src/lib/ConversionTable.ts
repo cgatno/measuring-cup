@@ -1,5 +1,3 @@
-// @flow
-
 // For quick lookup of zero-based index of a given unit in the factor table
 const lookup = {
   cup: 0,
@@ -35,7 +33,7 @@ export default class ConversionTable {
     // Check that both units specified can be looked up
     if (!lookup[fromUnit.toLowerCase()] && !lookup[toUnit.toLowerCase()]) {
       throw new Error(
-        'The specified `from` and `to` units must both exist in the lookup table.',
+        "The specified `from` and `to` units must both exist in the lookup table.",
       );
     }
 

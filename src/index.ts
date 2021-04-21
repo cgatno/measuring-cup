@@ -1,5 +1,3 @@
-// @flow
-
 import Quantity from './lib/Quantity';
 
 /**
