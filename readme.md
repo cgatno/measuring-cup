@@ -1,6 +1,6 @@
 # measuring-cup
 
-[![Build Status](https://travis-ci.org/cgatno/measuring-cup.svg?branch=develop)](https://travis-ci.org/cgatno/measuring-cup)
+[![Build Package](https://github.com/cgatno/measuring-cup/actions/workflows/build.yml/badge.svg)](https://github.com/cgatno/measuring-cup/actions/workflows/build.yml)
 [![npm version](https://badge.fury.io/js/measuring-cup.svg)](https://badge.fury.io/js/measuring-cup)
 
 A quick and simple tool to convert cooking measurements like ounces, cups and
