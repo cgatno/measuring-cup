@@ -1,5 +1,5 @@
 // For quick lookup of zero-based index of a given unit in the factor table
-const lookup = {
+const lookup: Record<string, number> = {
   cup: 0,
   ounce: 1,
   oz: 1,

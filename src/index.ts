@@ -1,4 +1,4 @@
-import Quantity from './lib/Quantity';
+import Quantity from "./lib/Quantity";
 
 /**
  * Create a new Quantity object to access conversion functions.
@@ -6,4 +6,7 @@ import Quantity from './lib/Quantity';
  * For example, 12 cups. Quantities can be integers or decimals, so 15.5 tablespoons is also
  * acceptable. The interpreter also understands most abbreviated units, e.g. 1 oz.
  */
-module.exports = (inputMeasurement: string) => new Quantity(inputMeasurement);
+const measure = (inputMeasurement: string) => new Quantity(inputMeasurement);
+
+module.exports = measure;
+export default measure;
